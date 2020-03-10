@@ -130,6 +130,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-database.db
-app.sock
+flask_app/database.db
 .idea

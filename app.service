@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn instance to serve my flask project
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www
+
+WorkingDirectory=/workspace
+Environment="PATH=/opt/conda/envs/flask/bin"
+ExecStart=/opt/conda/envs/flask/bin/gunicorn --bind unix:app.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
