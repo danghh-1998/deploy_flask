@@ -1,12 +1,12 @@
 from flask import Flask, render_template
-from model import create_tel, get_tels, get_tel, delete_tel
+from model import get_tels
 
 app = Flask(__name__)
 app.config.from_object('config')
 
 
 @app.route('/')
-def hello_world():
+def list_tel():
     return render_template('list_tel.html', tels=get_tels())
 
 
