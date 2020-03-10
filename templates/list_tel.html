@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>List telephone number</title>
+{% endblock %}
+{% block body %}
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Telephone number</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tel in tels %}
+                <tr>
+                    <td>{{ tel.name }}</td>
+                    <td>{{ tel.tel_number }}</td>
+                    <td>{{ tel.email }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

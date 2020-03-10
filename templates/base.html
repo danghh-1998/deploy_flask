@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    {% block title %}{% endblock %}
+</head>
+<body>
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+    <script src="{{ url_for('static', filename='js/bootstrap/bootstrap.js') }}"></script>
+</body>
+</html>
